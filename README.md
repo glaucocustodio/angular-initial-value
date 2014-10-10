@@ -18,7 +18,7 @@ The script will read values from `value`, `checked` and `selected` attributes an
 
 
 ## Contributing
-Check [CONTRIBUTING.md](blob/master/CONTRIBUTING.md) for more information.
+Check [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
 
 ## License
 
