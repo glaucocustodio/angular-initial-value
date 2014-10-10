@@ -23,7 +23,7 @@ You can pass the start value to attribute as well (this feature is not available
 
 ## How it works
 
-The script will read values from `value`, `checked` and `selected` attributes and load them into its respectives `ng-model`.
+The script will read values from `value`, `checked` and `selected` attributes and load them into its respectives `ng-model`'s.
 
 
 ## Contributing
