@@ -1,18 +1,27 @@
 describe("e2e", function() {
-  it("input[type='text']", function() {
-    var name = element(by.id('name')).getAttribute('value');
-    expect(name).toBe('John');
-  });
+  var values ={
+    text:     'John',
+    email:    'john@provider.com',
+    tel:      '12 3456789',
+    select:   'green',
+    textarea: 'Lorem ipsum',
+    color:    '#ffaacc',
+    range:    '10',
+    search:   'my name is',
+    url:      'http://google.com',
+    password: 'password123'
+  }
 
-  it("input[type='email']", function() {
-    var email = element(by.id('email')).getAttribute('value');
-    expect(email).toBe('john@provider.com');
-  });
+  function assertValue(key){
+    return function(){
+      var input = element(by.id(key)).getAttribute('value');
+      expect(input).toBe(values[key]);
+    }
+  };
 
-  it("input[type='tel']", function() {
-    var tel = element(by.id('tel')).getAttribute('value');
-    expect(tel).toBe('12 3456789');
-  });
+  for (key in values) {
+    it(key, assertValue(key));
+  }
 
   it("input[type='checkbox']:checked", function() {
     var check = element(by.id('check_dog')).isSelected();
@@ -32,15 +41,5 @@ describe("e2e", function() {
   it("input[type='radio']:not(checked)", function() {
     var radio = element(by.id('radio_female')).isSelected();
     expect(radio).toBe(false);
-  });
-
-  it("select option:selected", function() {
-    var select = element(by.id('fav_color')).getAttribute('value');
-    expect(select).toBe('green');
-  });
-
-  it("textarea", function() {
-    var textarea = element(by.id('notes')).getAttribute('value');
-    expect(textarea).toBe('Lorem ipsum');
   });
 });

@@ -8,7 +8,7 @@
   </style>
   <title>Angular Initial Value - Example</title>
 
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.4/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.5/angular.min.js"></script>
   <script src="../src/angular-initial-value.js"></script>
 
   <script>
@@ -18,8 +18,8 @@
 <body>
   <div>
     Name (type="text")
-    <input type="text" value="John" name="name" initial-value ng-model="name" id="name"/>    
-    {{name}}
+    <input type="text" value="John" name="text" initial-value ng-model="text" id="text"/>
+    {{text}}
   </div>
 
   <div>
@@ -32,6 +32,36 @@
     Phone (type="tel")
     <input type="tel" value="12 3456789" name="tel" initial-value ng-model="tel" id="tel" /> 
     {{tel}}
+  </div>
+
+  <div>
+    Color (type="color")
+    <input id="color" name="color" initial-value ng-model="color" type="color" value="#FFAACC"/>
+    {{color}}
+  </div>
+
+  <div>
+    Range (type="range")
+    <input id="range" name="range" initial-value ng-model="range" type="range" min="1" max="100" value="10"/>
+    {{range}}
+  </div>
+
+  <div>
+    Search (type="search")
+    <input id="search" name="search" initial-value ng-model="search" type="search" value="my name is"/>
+    {{search}}
+  </div>
+
+  <div>
+    Url (type="url")
+    <input id="url" name="url" initial-value ng-model="url" type="url" value="http://google.com" />
+    {{url}}
+  </div>
+
+  <div>
+    Password (type="password")
+    <input id="password" name="password" initial-value ng-model="password" type="password" value="password123"/>
+    {{password}}
   </div>
 
   <div>
@@ -49,13 +79,13 @@
   </div>
 
   <div>
-    <select initial-value ng-model="fav_color" name="fav_color" id="fav_color">
+    <select initial-value ng-model="select" name="select" id="select">
       <option value=""></option>
       <option value="blue">blue</option>
       <option value="red">red</option>
       <option selected value="green">green</option>
     </select>
-    {{fav_color}}
+    {{select}}
   </div>
 
   <div>
@@ -73,8 +103,8 @@
   </div>
 
   <div>
-    <textarea initial-value ng-model="notes" id="notes" cols="30" rows="10">Lorem ipsum</textarea>
-    {{notes}}
+    <textarea initial-value ng-model="textarea" id="textarea" cols="30" rows="10">Lorem ipsum</textarea>
+    {{textarea}}
   </div>
 </body>
 </html>

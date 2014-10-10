@@ -12,12 +12,22 @@ A simple AngularJS directive to set ng-model (and consequently field value) base
 
 2- Add `initial-value` attribute to yours form fields
 
+```html
+<input type="text" value="John" name="text" initial-value ng-model="text" id="text"/>
+```
+
+You can pass the start value to attribute as well (this option does not work only with `checkbox` and `radio`):
+```html
+<input type="text" name="text" initial-value="John" ng-model="text" id="text"/>
+```
+
 ## How it works
 
 The script will read values from `value`, `checked` and `selected` attributes and load them into its respectives `ng-model`.
 
 
 ## Contributing
+
 Check [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
 
 ## License
