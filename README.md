@@ -4,13 +4,13 @@ A tiny AngularJS directive to set ng-model (and consequently field value) based 
 
 ## Usage
 
-1- Include `angular-initial-value.js` after AngularJS
+1- Download plugin (`bower install angular-initial-value`) and include it after AngularJS:
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
 <script src="dist/angular-initial-value.js"></script>
 ```
 
-2- Load the module in your application
+2- Load the module in your application:
 ```js
 var app = angular.module('myApp', ['initialValue']);
 ```
