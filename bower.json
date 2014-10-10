@@ -1,0 +1,25 @@
+{
+  "name": "angular-initial-value",
+  "version": "0.0.1",
+  "homepage": "https://github.com/glaucocustodio/angular-initial-value",
+  "authors": [
+    "Glauco Custódio <glauco.custodio@gmail.com>"
+  ],
+  "description": "A tiny AngularJS directive to set ng-model (and consequently field value) based on form fields attributes.",
+  "main": "dist/angular-initial-value.js",
+  "keywords": [
+    "angular",
+    "value",
+    "initial",
+    "attribute"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ]
+}
