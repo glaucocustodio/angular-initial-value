@@ -10,13 +10,13 @@ A simple AngularJS directive to set ng-model (and consequently field value) base
 <script src="dist/angular-initial-value.js"></script>
 ```
 
-2- Add `initial-value` attribute to yours form fields
+2- Add `initial-value` attribute for your form fields, it supports the most common inputs like `text`, `email`, `tel`, `color`, `range`, `search`, `url`, `password`, `checkbox`, `radio`, `select`, `textarea`.
 
 ```html
 <input type="text" value="John" name="text" initial-value ng-model="text" id="text"/>
 ```
 
-You can pass the start value to attribute as well (this option does not work only with `checkbox` and `radio`):
+You can pass the start value to attribute as well (this feature is not available only for `checkbox` and `radio`)
 ```html
 <input type="text" name="text" initial-value="John" ng-model="text" id="text"/>
 ```
