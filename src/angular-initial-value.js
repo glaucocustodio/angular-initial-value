@@ -1,5 +1,17 @@
 var initialValueModule = angular.module('initialValue', [])
 .directive('initialValue', function() {
+  var removeIndent = function (str) {
+		var arr = str.split("\n");
+		var result = "";
+		arr.forEach(function (it) {
+			result += it.trim();
+			result += '\n';
+		});
+
+		return result;
+	};
+  
+  
   return{
     restrict: 'A',
     controller: ['$scope', '$element', '$attrs', '$parse', function($scope, $element, $attrs, $parse){
@@ -7,7 +19,7 @@ var initialValueModule = angular.module('initialValue', [])
       var getter, setter, val, tag;
       tag = $element[0].tagName.toLowerCase();
 
-      val = $attrs.initialValue || $element.val();
+      val = $attrs.initialValue || removeIndent($element.val());
       if(tag === 'input'){
         if($element.attr('type') === 'checkbox'){
           val = $element[0].checked ? true : undefined;
