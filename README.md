@@ -41,7 +41,7 @@ Check [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
 
 ## Related projects
 
-After starting this project I found this <a target="_blank" href="https://github.com/johngeorgewright/angular-auto-value">another one</a> which pretends deal with the same issue.
+After starting this project I found this <a target="_blank" href="https://github.com/johngeorgewright/angular-auto-value">another one</a> which intends deal with the same issue.
 
 ## License
 
