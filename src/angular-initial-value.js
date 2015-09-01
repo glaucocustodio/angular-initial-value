@@ -26,6 +26,8 @@ var initialValueModule = angular.module('initialValue', [])
         } else if($element.attr('type') === 'radio'){
           val = ($element[0].checked || $element.attr('selected') !== undefined) ? $element.val() : undefined;
         } 
+      } else if(tag ==='select') {
+        val = $element.find("option[selected='selected']").attr('value');
       }
 
       if($attrs.ngModel){
