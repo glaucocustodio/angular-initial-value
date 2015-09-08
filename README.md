@@ -15,7 +15,7 @@ A tiny AngularJS directive to set ng-model (and consequently field value) based 
 var app = angular.module('myApp', ['initialValue']);
 ```
 
-3- Add `initial-value` attribute for your form fields, it supports the most common inputs like `text`, `email`, `tel`, `color`, `range`, `search`, `url`, `password`, `checkbox`, `radio`, `select`, `textarea`.
+3- Add `initial-value` attribute for your form fields, it supports the most common inputs like `text`, `email`, `tel`, `number`, `color`, `range`, `search`, `url`, `password`, `checkbox`, `radio`, `select`, `textarea`.
 
 ```html
 <body ng-app="myApp">
