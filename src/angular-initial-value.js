@@ -10,8 +10,8 @@ var initialValueModule = angular.module('initialValue', [])
 
 		return result;
 	};
-  
-  
+
+
   return{
     restrict: 'A',
     controller: ['$scope', '$element', '$attrs', '$parse', function($scope, $element, $attrs, $parse){
@@ -25,7 +25,9 @@ var initialValueModule = angular.module('initialValue', [])
           val = $element[0].checked ? true : undefined;
         } else if($element.attr('type') === 'radio'){
           val = ($element[0].checked || $element.attr('selected') !== undefined) ? $element.val() : undefined;
-        } 
+        } else if($element.attr('type') === 'number'){
+          val = ($element.val() != undefined) ? parseFloat($element.val()) : undefined;
+        }
       }
 
       if($attrs.ngModel){

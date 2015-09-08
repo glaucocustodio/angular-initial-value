@@ -9,7 +9,8 @@ describe("e2e", function() {
     range:    '10',
     search:   'my name is',
     url:      'http://google.com',
-    password: 'password123'
+    password: 'password123',
+    number: '34'
   }
 
   function assertValue(key){
