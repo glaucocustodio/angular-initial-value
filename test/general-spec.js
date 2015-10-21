@@ -4,7 +4,7 @@ describe("e2e", function() {
     email:    'john@provider.com',
     tel:      '12 3456789',
     select:   'green',
-    textarea: 'Lorem ipsum',
+    textarea: 'Lorem ipsum\n',
     color:    '#ffaacc',
     range:    '10',
     search:   'my name is',
