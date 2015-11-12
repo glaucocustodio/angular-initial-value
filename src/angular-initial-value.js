@@ -29,6 +29,8 @@ var initialValueModule = angular.module('initialValue', [])
           val = ($element.val() !== undefined) ? parseFloat($element.val()) : undefined;
         } else if($element.attr('type') === 'color' || $element.attr('type') === 'range'){
           val = $element[0].getAttribute('value');
+        } else if($element.attr('type') === 'date') {
+          val = new Date(val);
         }
       } else if(tag === "select"){
         for (i=0; i < $element[0].options.length; i++) {
