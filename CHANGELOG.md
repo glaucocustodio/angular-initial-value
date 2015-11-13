@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.0.4 (2015-11-13)
+* Add support to `input[type="date"]` and `select` multiple
+
 ## 0.0.3 (2015-10-21)
 * Fix `input[type="color"]`, `input[type="range"]` and `select`
 
