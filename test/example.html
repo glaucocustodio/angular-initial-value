@@ -8,6 +8,7 @@
   </style>
   <title>Angular Initial Value - Example</title>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
   <script src="../src/angular-initial-value.js"></script>
 
@@ -59,6 +60,12 @@
   </div>
 
   <div>
+    Date (type="date")
+    <input id="date" name="date" initial-value ng-model="date" type="date" value="1989-11-15"/>
+    {{date}}
+  </div>
+
+  <div>
     Password (type="password")
     <input id="password" name="password" initial-value ng-model="password" type="password" value="password123"/>
     {{password}}
@@ -86,6 +93,17 @@
       <option selected value="green">green</option>
     </select>
     {{select}}
+  </div>
+
+  <div>
+    <select initial-value ng-model="multiple_select" name="multiple_select" id="multiple_select" multiple size="5">
+      <option value=""></option>
+      <option value="blue">blue</option>
+      <option value="red">red</option>
+      <option selected value="green">green</option>
+      <option selected value="pink">pink</option>
+    </select>
+    {{multiple_select}}
   </div>
 
   <div>
