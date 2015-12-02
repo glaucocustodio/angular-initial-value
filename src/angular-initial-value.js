@@ -44,7 +44,7 @@ var initialValueModule = angular.module('initialValue', [])
         }
       }
 
-      if($attrs.ngModel){
+      if($attrs.ngModel && (val || (values != undefined && values.length))){
         getter = $parse($attrs.ngModel);
         setter = getter.assign;
         setter($scope, values != undefined && values.length ? values : val);

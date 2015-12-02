@@ -14,9 +14,15 @@
 
   <script>
     var app = angular.module('myApp', ['initialValue']);
+
+    app.controller('ExampleController', ['$scope', function($scope) {
+      $scope.sex = {
+        name: ''
+      }
+    }]);
   </script>
 </head>
-<body>
+<body ng-app="myApp" ng-controller="ExampleController">
   <div>
     Name (type="text")
     <input type="text" value="John" name="text" initial-value ng-model="text" id="text"/>
@@ -108,16 +114,26 @@
 
   <div>
     <label>
-      <input type="radio" initial-value checked name="sex" ng-model="male" value="male" id="radio_male" />
+      <input type="radio" initial-value checked name="sex" ng-model="sex.name" value="male" id="radio_male" />
       Male
     </label>
-    {{male}}
     <br>
     <label>
-      <input type="radio" name="sex" ng-model="female" value="female" id="radio_female"/>
+      <input type="radio" initial-value name="sex" ng-model="sex.name" value="female" id="radio_female"/>
       Female
     </label>
-    {{female}}
+  </div>
+
+  <div>
+    <label>
+      <input type="radio" initial-value name="color" ng-model="blue" value="blue" id="radio_blue" />
+      Blue
+    </label>
+    <br>
+    <label>
+      <input type="radio" initial-value checked name="color" ng-model="red" value="red" id="radio_red"/>
+      Red
+    </label>
   </div>
 
   <div>

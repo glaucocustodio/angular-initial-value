@@ -34,13 +34,24 @@ describe("e2e", function() {
     expect(check).toBe(false);
   });
 
-  it("input[type='radio']:checked", function() {
+  it("first input[type='radio']:checked", function() {
     var radio = element(by.id('radio_male')).isSelected();
     expect(radio).toBe(true);
   });
 
-  it("input[type='radio']:not(checked)", function() {
+  it("second input[type='radio']:checked", function() {
+    var radio = element(by.id('radio_red')).isSelected();
+    expect(radio).toBe(true);
+  });
+
+  it("first input[type='radio']:not(checked)", function() {
     var radio = element(by.id('radio_female')).isSelected();
     expect(radio).toBe(false);
   });
+
+  it("second input[type='radio']:not(checked)", function() {
+    var radio = element(by.id('radio_blue')).isSelected();
+    expect(radio).toBe(false);
+  });
+
 });
