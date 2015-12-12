@@ -1,16 +1,15 @@
 var initialValueModule = angular.module('initialValue', [])
 .directive('initialValue', function() {
   var removeIndent = function (str) {
-		var result = "";
     if(str && typeof(str) === 'string') {
       var arr = str.split("\n");
       arr.forEach(function (it) {
-        result += it.trim();
-        result += '\n';
+        it = it.trim();
       });
+      str = arr.join("\n");
     }
-		return result;
-	};
+    return str;
+  };
 
   return{
     restrict: 'A',
