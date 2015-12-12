@@ -1,16 +1,15 @@
 var initialValueModule = angular.module('initialValue', [])
 .directive('initialValue', function() {
   var removeIndent = function (str) {
-		var result = "";
     if(str && typeof(str) === 'string') {
       var arr = str.split("\n");
       arr.forEach(function (it) {
-        result += it.trim();
-        result += '\n';
+        it = it.trim();
       });
+      str = arr.join("\n");
     }
-		return result;
-	};
+    return str;
+  };
 
   return{
     restrict: 'A',
@@ -34,8 +33,8 @@ var initialValueModule = angular.module('initialValue', [])
         }
       } else if(tag === "select"){
         values = [];
-        for (i=0; i < $element[0].options.length; i++) {
-          option = $element[0].options[i];
+        for (var i=0; i < $element[0].options.length; i++) {
+          var option = $element[0].options[i];
           if(option.hasAttribute('selected') && $element[0].hasAttribute('multiple')) {
             values.push(option.text);
           } else {
