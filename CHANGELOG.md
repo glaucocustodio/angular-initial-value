@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.0.6 (2015-12-14)
+* Add missing `var` keyword
+
 ## 0.0.5 (2015-12-02)
 * Fix bug with `input[type="radio"]` (see <a href="https://github.com/glaucocustodio/angular-initial-value/issues/8">#8</a>)
 

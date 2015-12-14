@@ -1,12 +1,11 @@
 var initialValueModule = angular.module('initialValue', [])
 .directive('initialValue', function() {
-  var removeIndent = function (str) {
-		var result = "";
+  var removeIndent = function(str) {
+    var result = "";
     if(str && typeof(str) === 'string') {
       var arr = str.split("\n");
-      arr.forEach(function (it) {
-        result += it.trim();
-        result += '\n';
+      arr.forEach(function(it) {
+        result += it.trim() + '\n';
       });
     }
 		return result;
@@ -34,8 +33,8 @@ var initialValueModule = angular.module('initialValue', [])
         }
       } else if(tag === "select"){
         values = [];
-        for (i=0; i < $element[0].options.length; i++) {
-          option = $element[0].options[i];
+        for (var i=0; i < $element[0].options.length; i++) {
+          var option = $element[0].options[i];
           if(option.hasAttribute('selected') && $element[0].hasAttribute('multiple')) {
             values.push(option.text);
           } else {
@@ -44,10 +43,10 @@ var initialValueModule = angular.module('initialValue', [])
         }
       }
 
-      if($attrs.ngModel && (val || (values != undefined && values.length))){
+      if($attrs.ngModel && (val || (values !== undefined && values.length))){
         getter = $parse($attrs.ngModel);
         setter = getter.assign;
-        setter($scope, values != undefined && values.length ? values : val);
+        setter($scope, values !== undefined && values.length ? values : val);
       }
     }]
   };
